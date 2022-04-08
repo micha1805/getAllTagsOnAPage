@@ -10,7 +10,7 @@ const getAllUniqueAtributes = (tagNamesArray) =>{
 
 	let allAttributes = []
 
-	tagNamesArray.forEach((tag) => document.querySelectorAll(tag).forEach(tagInstance => allAttributes = [...allAttributes, ...tagInstance.getAttributeNames()]))
+	tagNamesArray.forEach(tag => document.querySelectorAll(tag).forEach(tagInstance => allAttributes = [...allAttributes, ...tagInstance.getAttributeNames()]))
 
 	return [...new Set(allAttributes)]
 
