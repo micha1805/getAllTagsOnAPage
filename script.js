@@ -10,17 +10,7 @@ const getAllUniqueAtributes = (tagNamesArray) =>{
 
 	let allAttributes = []
 
-	tagNamesArray.forEach((tag) => {
-
-		document.querySelectorAll(tag).forEach((tagInstance) => {
-
-			allAttributes = [...allAttributes, ...tagInstance.getAttributeNames()]
-			// console.log(tagInstance.getAttributeNames())
-
-			// allAttributes = [allAttributes, ...tagInstance.getAttributeNames()]
-
-		})
-	})
+	tagNamesArray.forEach((tag) => document.querySelectorAll(tag).forEach(tagInstance => allAttributes = [...allAttributes, ...tagInstance.getAttributeNames()]))
 
 	return [...new Set(allAttributes)]
 
@@ -35,9 +25,7 @@ const getArrayOfTagsAndUniqueAttributes = (tagNamesArray) => {
 
 		let arrayOfAttributesPerTag = []
 
-		document.querySelectorAll(tagName).forEach((tag) => {
-			arrayOfAttributesPerTag = [...arrayOfAttributesPerTag, ...tag.getAttributeNames()]
-		})
+		document.querySelectorAll(tagName).forEach(tag => arrayOfAttributesPerTag = [...arrayOfAttributesPerTag, ...tag.getAttributeNames()])
 
 		const arrayOfUniqueAttributesPerTag = [...new Set(arrayOfAttributesPerTag)]
 
