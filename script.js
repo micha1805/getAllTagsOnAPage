@@ -1,10 +1,4 @@
-const getAllUniqueTags = () => {
-	let uniqueTags = [...new Set(Array.from(document.querySelectorAll('*')).map((elt) => elt.tagName.toLowerCase()))]
-
-	return uniqueTags.sort()
-
-}
-
+const getAllUniqueTags = () => [...new Set(Array.from(document.querySelectorAll('*')).map((elt) => elt.tagName.toLowerCase()))].sort()
 
 const getAllUniqueAtributes = (tagNamesArray) =>{
 
