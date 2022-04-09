@@ -19,4 +19,4 @@ const getArrayOfTagsAndUniqueAttributes = (tagNamesArray) => {
 
 const exportFunction = () => getArrayOfTagsAndUniqueAttributes(getAllUniqueTags())
 
-module.export = exportFunction
+module.exports = exportFunction
