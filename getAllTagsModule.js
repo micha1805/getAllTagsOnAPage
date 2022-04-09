@@ -3,7 +3,7 @@ const getAllUniqueTags = () => [...new Set(Array.from(document.querySelectorAll(
 
 const getArrayOfTagsAndUniqueAttributes = (tagNamesArray) => {
 
-	return uniqueTags.map((tagName) => {
+	return tagNamesArray.map((tagName) => {
 
 		let arrayOfAttributesPerTag = []
 
